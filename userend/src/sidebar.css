@@ -1,0 +1,21 @@
+nav::-webkit-scrollbar-button {
+  display: none;
+}
+
+nav::-webkit-scrollbar-track {
+  background: #96a1be;
+}
+
+nav::-webkit-scrollbar-thumb {
+  background-color: #60a5fa;
+  border-radius: 10px;
+}
+
+nav:hover::-webkit-scrollbar-thumb:hover {
+  background-color: #3b82f6;
+}
+
+nav {
+  scrollbar-width: thin;
+  scrollbar-color: #0051b4 #1e3a8a;
+}
