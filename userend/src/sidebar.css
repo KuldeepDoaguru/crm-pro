@@ -4,11 +4,13 @@ nav::-webkit-scrollbar-button {
 
 nav::-webkit-scrollbar-track {
   background: #96a1be;
+  display: none;
 }
 
 nav::-webkit-scrollbar-thumb {
   background-color: #60a5fa;
   border-radius: 10px;
+  display: none;
 }
 
 nav:hover::-webkit-scrollbar-thumb:hover {
@@ -16,6 +18,21 @@ nav:hover::-webkit-scrollbar-thumb:hover {
 }
 
 nav {
-  scrollbar-width: thin;
-  scrollbar-color: #0051b4 #1e3a8a;
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
 }
+
+/* body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  margin-left: 16rem;
+  padding: 1rem;
+  transition: margin-left 0.3s;
+}
+
+.sidebar-closed {
+  margin-left: 4rem;
+} */

@@ -79,7 +79,7 @@ const MessageDropdown = () => {
               <div className="flex-1">
                 <p className="font-semibold">{notification.title}</p>
                 <p className="text-sm text-gray-500">
-                  {notification.description}
+                  {notification.description.slice(0, 20)}
                 </p>
               </div>
               <div className="text-xs text-gray-400">{notification.time}</div>

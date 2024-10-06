@@ -7,8 +7,9 @@ import MessageDropdown from "../components/MessageDropdown";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { FaRankingStar } from "react-icons/fa6";
 import { GrLanguage } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ isSidebarOpen }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isDropdownOpenIcon, setIsDropdownOpenIcon] = useState(false);
   const [isDropdownNotification, setIsDropdownNotification] = useState(false);
@@ -107,7 +108,11 @@ const Header = () => {
   }, [dropdownMessageRef]);
 
   return (
-    <header className="flex justify-between items-center p-4 bg-white shadow">
+    <header
+      className={`fixed top-0 ${
+        isSidebarOpen ? "left-64" : "left-20"
+      } right-0 flex justify-between items-center p-4 bg-white shadow z-50 transition-all duration-300 ease-in-outy`}
+    >
       <div className="flex items-center w-1/2">
         <div className="relative w-full">
           <input
@@ -134,17 +139,19 @@ const Header = () => {
                 <div className="flex flex-col space-y-4 border-red-100 p-4">
                   <div className="flex flex-row space-x-8">
                     <div className="flex-1 bg-gradient-to-l from-teal-800 to-teal-400 h-16 flex items-center justify-center text-white rounded-xl py-8 shadow-xl shadow-red-300">
-                      <div className="flex flex-col items-center justify-center">
-                        <div className="">
-                          {" "}
-                          <RiTeamFill className="text-2xl text-white" />{" "}
+                      <Link to="/admin-team">
+                        <div className="flex flex-col items-center justify-center">
+                          <div className="">
+                            {" "}
+                            <RiTeamFill className="text-2xl text-white" />{" "}
+                          </div>
+                          <div>
+                            <h2 className="text-md font-semibold text-white">
+                              Team
+                            </h2>{" "}
+                          </div>
                         </div>
-                        <div>
-                          <h2 className="text-md font-semibold text-white">
-                            Team
-                          </h2>{" "}
-                        </div>
-                      </div>
+                      </Link>
                     </div>
                     <div className="flex-1 bg-gradient-to-r from-red-800 to-red-400 h-16 flex items-center justify-center text-white rounded-xl py-8 shadow-xl shadow-red-300">
                       <div className="flex flex-col items-center justify-center">

@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
-import DashboardContent from "./DashboardContent";
+import LeadPageContent from "./LeadPageContent";
 
-const Dashboard = () => {
+const LeadPage = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
-
   return (
     <div>
       <div className="flex min-h-screen w-full">
@@ -23,11 +22,11 @@ const Dashboard = () => {
           }`}
         >
           <Header isSidebarOpen={isSidebarOpen} />
-          <DashboardContent />
+          <LeadPageContent />
         </div>
       </div>
     </div>
   );
 };
 
-export default Dashboard;
+export default LeadPage;
